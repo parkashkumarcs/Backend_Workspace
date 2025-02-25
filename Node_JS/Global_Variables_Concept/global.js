@@ -5,6 +5,18 @@
 
 var extractData = require('./names');
 var callFunction = require('./function');
+var multiVariables = require('./multiple-Instances');
+
+console.log(multiVariables); //Print all instances that are exported from multiple-Instances.js file
+/*
+    If we want to print single single instance then we access separately by using object.
+*/
+console.log(multiVariables.fruits);
+console.log(multiVariables.singlePeron);
+console.log(multiVariables.message); // without return output
+console.log(multiVariables.message1); // with return
+console.log(multiVariables.setData); // return entire object
+console.log(multiVariables.setData.City); // return single value
 
 console.log("My name is " + extractData.obj.name); // Cool it works:)
 let name = callFunction(extractData.obj.name);
