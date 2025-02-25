@@ -38,3 +38,23 @@
 //Let's Start first code:)
 
 console.log("Hello there, I am first code line of Node.js");
+
+// console.log('This is current directory' + __dirname); //OR we can do under
+let current_Path = __dirname;
+console.log("This is current directory " + current_Path);
+
+// Without SetInterval() method
+console.log("Hello There:)"); //one time execute same code
+for(let i = 1; i<5; i++){
+    console.log("Hello There:)"); //multiple time to execute same code using loop!
+}
+
+//With using SetInerval():
+    // Def: This is function to use execute the same code in multiple times in range of 
+    // given time and condition.
+    // Remember always use conditions to stop the execution process otherwise it excutes infinite times
+    // Syntax : setInterval(function, milliseconds);
+
+setInterval(function(){
+    console.log('Hello Coders');
+},1000);    
