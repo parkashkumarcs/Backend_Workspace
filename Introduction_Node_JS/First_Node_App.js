@@ -54,7 +54,45 @@ for(let i = 1; i<5; i++){
     // given time and condition.
     // Remember always use conditions to stop the execution process otherwise it excutes infinite times
     // Syntax : setInterval(function, milliseconds);
+var stop =0;
+var mutliExe = setInterval(function(){
+    stop++;
+    console.log(`Hello Coder executed ${stop} times` ); //using tamplete literals
+    if(stop === 5){
+        clearInterval(mutliExe);
+        console.log('stoped');
+    }
 
-setInterval(function(){
-    console.log('Hello Coders');
 },1000);    
+
+// Functions
+
+var empName = 'Parkash Kumar';
+var department = 'Computer Science';
+var role = 'MERN Stack Developer';
+
+var data = function(name){
+    return name;
+}
+//callback funcitons here
+
+console.log("Employee name is " + data(empName));
+console.log("Employee department is " + data(department));
+console.log("Employee role is " + data(role));
+
+/*
+    Ok as we done the some simple code about Node.js but believe me this not beauty of Node.js.
+    Let me show and explain.
+
+    As we have defined a function as data in which we passing one parameter
+    as a name and then access this funcion by calling it. We send the some 
+    information as a parameter to that function to print them.
+
+    Let do some unique in Node.js
+    create three files
+        1-> Names.js
+        2-> function.js
+        3-> globalModule.js
+
+
+*/
