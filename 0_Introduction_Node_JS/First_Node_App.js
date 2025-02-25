@@ -89,7 +89,8 @@ console.log("Employee role is " + data(role));
     information as a parameter to that function to print them.
 
     Let do some unique in Node.js
-    create three files
+    create one folder and three files as
+    -> Global_Variables_Concept 
         1-> Names.js
         2-> function.js
         3-> globalModule.js
