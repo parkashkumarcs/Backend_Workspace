@@ -1,0 +1,40 @@
+/*
+    About Node.js
+        Node.js is open source technology to use develop the server side application.
+        Node not support->
+            -> No DOM
+            -> Not window method
+            -> Not interactive develop environment
+
+    Javascript.js VS Node.js
+        As we learnt the javascrip.js concepts where we use DOM to render our web applications
+        by using window methods.
+        Javascript gives the interactive evironment to develop the applications.
+        Javascript has fragmentations and use ES6 Module.
+        While Node.js differ as that it not support DOM, window methods etc.
+        Node.js has various type of fragmentation versions and use CommonJS modules.
+
+    Download the latest version software from official site of Node.js
+        1-> Install in your computer 
+        2-> Run the terminal
+        3-> Navigate your workspace directory where you want to develop
+            the node application. Example
+            /system32/myPC/D/cd foldername
+    We can write the node code in the terminal instead of use IDE such as VS code etc.
+    So we just write the node without any arguement in terminal and press enter, it will
+    take you in repo environment. Which can be use as a development environment.
+
+    Let's begin our advance journey and build something amazing:)
+
+*/
+
+//Most common use global variables of Node.js are:
+    // __dirname    = it provides the current path directory
+    // __fileName   = it is use for files
+    // require      = This is function to use modules such as (commonJS)
+    // module       = info about current module (means file)
+    // process      = Info about env where the program is being executed.
+
+//Let's Start first code:)
+
+console.log("Hello there, I am first code line of Node.js");
