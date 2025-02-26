@@ -20,3 +20,16 @@
     So let's begin:)------>>>>>>>>>>>>>>>>>>>>>       
 
 */
+
+
+//Let's creaate the OS object as under
+
+var OS = require('os'); //OS object created
+
+// Now let's use the each method of OS module with definition.
+
+console.log('The current type of Operating System is ' + OS.type()); 
+//type() method uses to return the name of Operating System
+
+console.log('Current CPU architecture is ' + OS.arch());
+// arch() is return the CPU architecture.
