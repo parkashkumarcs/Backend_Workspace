@@ -3,6 +3,12 @@
     // extension files such as .txt and others.
 // Let's  Observ and write the basic coding to read and write the contents in files.
 
-// Create the a viarables for file system as  readFileSync and writeFileSync
+// Create the viarables for file system as readFileSync and writeFileSync
+var {readFileSync, writeFileSync} = require('fs');
+// create another two variables for store the contents
+let data1 = readFileSync('./data/aboutMe.txt', 'utf8');
+let data2 = readFileSync('./data/skills.txt', 'utf8');
 
+console.log(data1);
+console.log(data2);
 
