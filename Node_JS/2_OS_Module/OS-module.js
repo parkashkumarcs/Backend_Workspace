@@ -49,3 +49,5 @@ console.log('Total memory in gigabyte is ' + Math.ceil(gigaByte) + ' GB Ram');
 
 //Let's do more practices with other OS methods. So we can understand meaning of OS.
 
+console.log("The current platform of Operating System is " + OS.platform())
+//It return the OS platform such as win32, linux etc........
