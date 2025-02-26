@@ -9,6 +9,8 @@ var {readFileSync, writeFileSync} = require('fs');
 let data1 = readFileSync('./data/aboutMe.txt', 'utf8');
 let data2 = readFileSync('./data/skills.txt', 'utf8');
 
+//Here utf8 works as character encoding that insure read and write contents in files with UTF-8 formate.
+
 console.log(data1);
 console.log(data2);
 
@@ -45,7 +47,8 @@ console.log(data5);
 //Cool it works:)
 
 // If you want to wirte multiple time in one file from different files you must include 
-// the flag object with 'a' to avoid over write contents.
+// the flag object with 'a' to avoid over write contents. 'a' means to append mode which helps to 
+// aviod the over write the contents.
 writeFileSync('./data/no_OverWriteData.txt', `This is data from aboutMe file ${data1}`,{flag:'a'}); 
 //resolved over write the contents
 writeFileSync('./data/no_OverWriteData.txt', `This is data from skill file ${data2}`, {flag:'a'}); 

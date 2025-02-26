@@ -21,3 +21,32 @@ readFile("./data/aboutMe.txt", 'utf8', (error, contents)=>{
 })
 
 //run this command in terminal 'node fs_errorHandling.js' and press enter:) check results in console.
+
+//We can write the code read and write methods in nested form let see how it looks like.
+// Following code is advance level to handle the errors.
+readFile("./data/aboutMe.txt", 'utf8', (error, contents)=>{
+    if(error){
+        console.log(error); // Of course if file is not exist it will through errors.
+    }
+    else{
+        var store1 = contents;
+        // console.log(contents); // else it read the file
+        readFile('./data/skills.txt', 'utf8', (error,contents)=>{
+            if(error){
+                console.log(error);
+            }else{
+                var store2 =contents;
+                writeFile('./data/newEmpty.txt', `${store1} ${store2}`, (error, contents)=>{
+                    if(error){
+                        console.log(error)
+                    }else{
+                        console.log(`Results from newEmpty.txt file is ${contents}`);
+                    }
+                    return;
+                });
+            }
+            return;
+        })
+    }
+    return;
+})
