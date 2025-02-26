@@ -33,3 +33,15 @@ console.log('The current type of Operating System is ' + OS.type());
 
 console.log('Current CPU architecture is ' + OS.arch());
 // arch() is return the CPU architecture.
+
+console.log('The total ammount of memory is ' + OS.totalmem() + ' byte');
+// Another OS method totalmem() is used to return the total memory of System.
+// totalmem return the memory in byte so if we want to convert it in another form so we do under
+
+let kiloByte = parseInt(OS.totalmem())/(1024); //return kilobytes
+let megaByte = parseInt(OS.totalmem())/(1024*1024); // return megabytes
+let gigaByte = parseInt(OS.totalmem())/(1024*1024*1024); // return gigabytes
+// and so on....
+console.log('Total memory in kilobyte is ' + Math.ceil(kiloByte) + ' KB');
+console.log('Total memory in megabyte is ' + Math.ceil(megaByte) + ' MB');
+console.log('Total memory in gigabyte is ' + Math.ceil(gigaByte) + ' GB');
