@@ -74,3 +74,6 @@ for (const interfaceName in obj){
         }
     })
 }
+
+console.log(OS.userInfo());
+//It return the user info 
