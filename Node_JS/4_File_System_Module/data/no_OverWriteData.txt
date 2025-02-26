@@ -1,0 +1,28 @@
+This is data from aboutMe file Being a computer scientist and graduated from Sukkur IBA University. I am so curious to share my experienc
+to software companies to give the best solution of complex problems. I am MERN Stack Developer and working on
+various projects such as EVS System, portfolio etc.
+I am so happy to see here. If you are here it means you are looking for better mentor.
+If yes then you came right place. We server for those who wants to become a good 
+programmer. Follow our github page, later it will help you to recieve latest contents.
+
+See you in workspace:).This is data from skill file 
+-> HTML/CSS
+-> Tailwild CSS
+-> Javascript
+-> ES6 Modules
+-> React.js
+-> Node.js
+-> Express.js
+-> Frontend/Backend Developer
+-> Bootsrap Developer
+-> MERN Stack Developer
+-> Bootcamp Developer
+-> Java develper
+-> Python Developer
+-> MySQL
+-> MongoDB
+-> PHP
+-> C++ Developer
+-> OOPs
+-> C/C#
+-> Assembly LanguageThis is data from empty file Hello I am Parkash from Node.js code file which I am written by fs method

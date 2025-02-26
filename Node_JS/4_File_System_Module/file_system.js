@@ -23,9 +23,9 @@ console.log("The following contents are created from fs write method");
 console.log(data3);
 
 // Another way to write the data into one file to another file.
-writeFileSync('./data/onlyWrite.txt', `This is data from aboutMe file ${data1}`); //over write the contents
-writeFileSync('./data/onlyWrite.txt', `This is data from skill file ${data2}`); //over write the contents
-writeFileSync('./data/onlyWrite.txt', `This is data from empty file ${data3}`); 
+writeFileSync('./data/onlyWrite.txt', `This is data from aboutMe file ${data1}`,{flag:'a'}); //over write the contents
+writeFileSync('./data/onlyWrite.txt', `This is data from skill file ${data2}`, {flag:'a'}); //over write the contents
+writeFileSync('./data/onlyWrite.txt', `This is data from empty file ${data3}`, {flag:'a'}); 
 //just this is last one can write the contents into the file
 
 // create one instance for onlyWrite file to store all contents from it
@@ -44,3 +44,13 @@ console.log(data5);
 
 //Cool it works:)
 
+// If you want to wirte multiple time in one file from different files you must include 
+// the flag object with 'a' to avoid over write contents.
+writeFileSync('./data/no_OverWriteData.txt', `This is data from aboutMe file ${data1}`,{flag:'a'}); 
+//resolved over write the contents
+writeFileSync('./data/no_OverWriteData.txt', `This is data from skill file ${data2}`, {flag:'a'}); 
+//resolved over write the contents
+writeFileSync('./data/no_OverWriteData.txt', `This is data from empty file ${data3}`, {flag:'a'}); 
+
+let data6 = readFileSync('./data/no_OverWriteData.txt', 'utf8');
+console.log(data6);
