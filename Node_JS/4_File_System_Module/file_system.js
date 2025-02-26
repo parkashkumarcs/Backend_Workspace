@@ -21,3 +21,22 @@ let data3 = readFileSync('./data/empty.txt', 'utf8');
 // Print the contents from empty.txt
 console.log("The following contents are created from fs write method");
 console.log(data3);
+
+// Another way to write the data into one file to another file.
+writeFileSync('./data/onlyWrite.txt', `This is data from aboutMe file ${data1}`); 
+writeFileSync('./data/onlyWrite.txt', `This is data from skill file ${data2}`);
+writeFileSync('./data/onlyWrite.txt', `This is data from empty file ${data3}`);
+
+// create one instance for onlyWrite file to store all contents from it
+let data4 = readFileSync('./data/onlyWrite.txt', 'utf8');
+
+// Print all contents from onlyWrite File txt extension.
+console.log(data4);
+//Note: If you run above codes in one time to write from three files it will over write 
+// one over to other one So you can write only one time in one file from multiple instances
+// as following:
+
+// create one instance for onlyWrite file to store all contents from it
+// let data4 = readFileSync('./data/onlyWrite.txt', 'utf8');
+
+
