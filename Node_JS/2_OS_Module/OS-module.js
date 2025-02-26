@@ -51,3 +51,26 @@ console.log('Total memory in gigabyte is ' + Math.ceil(gigaByte) + ' GB Ram');
 
 console.log("The current platform of Operating System is " + OS.platform())
 //It return the OS platform such as win32, linux etc........
+
+console.log("Free Memory:", OS.freemem()); // return cleared memory
+console.log("Home Directory:", OS.homedir()); //return home directory
+console.log("Network Interfaces:", OS.networkInterfaces()); // return network interfaces object
+
+// further we can explore the networkInterfaces() as following:)
+var obj = OS.networkInterfaces();
+// We know all internal data of network interfaces in object form so we need to create loop 
+// to aacess all data as under.
+for (const interfaceName in obj){ 
+    obj[interfaceName].forEach((netIndex)=>{
+        if(!netIndex.internal){
+            console.log(`Network Interface Name is ${interfaceName}`);
+            console.log(`Network Interface address is ${netIndex.address}`);
+             console.log(`Network Interface netmask is ${netIndex.netmask}`);
+             console.log(`Network Interface family is ${netIndex.family}`);
+             console.log(`Network Interface mac is ${netIndex.mac}`);
+             console.log(`Network Interface internal is ${netIndex.internal}`);
+             console.log(`Network Interface cidr is ${netIndex.cidr}`);
+             console.log(`Network Interface scopeid is ${netIndex.scopeid}`);
+        }
+    })
+}
