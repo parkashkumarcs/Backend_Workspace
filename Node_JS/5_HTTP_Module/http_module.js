@@ -41,3 +41,54 @@
  });
 
  server.listen(5001); // I have create another server as http://localhost:5001/about
+
+
+ // Let's do more practices to learn advance level:)
+
+ // creating another variable name as my myHTTP1
+ var myHTTP1 = require('http');
+
+ // Creating second server for data communication 
+ var server2 = myHTTP1.createServer((userRequest, serverResponse) =>{
+    if(userRequest.url === '/'){
+        serverResponse.end(`
+            <h1 style = 'color: blue;'>
+                Hi, I am PK's second Server. 
+            </h1>
+            <br>
+            <h4> 
+                I am here to server you what ever you want!
+            </h4>
+            <hr>    
+        `);
+    }
+    if(userRequest.url === '/courses'){
+        serverResponse.end(`
+            <h1 style = "color: green">
+                Courses Lists:
+            </h1>
+            <ol style= 'border: 2px solid red'>
+                <li>Fundamental Programming Language</li>
+                <li>Java Programming Language</li>
+                <li>Object Oriented Programming</li>
+                <li>HTML or HTML5</li>
+                <li>CSS/CSS3/ or Tailwind</li>
+                <li>Javascript</li>
+                <li>Node.js</li>
+                <li>Express.js/li>
+                <li>React.js</li>   
+            </ol>     
+        `)
+    }
+    // else{
+    //     serverResponse.end(`
+    //         <h1> Oops!</h1>
+    //         <p> 404 page not found:( </p>
+    
+    //         <a href = 'http://localhost:5002/'> Back to Home </a>
+    //     `)
+    // }
+    
+ })
+
+ server2.listen(5002);
