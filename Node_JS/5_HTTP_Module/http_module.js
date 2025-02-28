@@ -14,4 +14,13 @@
  
  // Create a global variable by using commonJS modules.
  var myHTTP = require('http');
- 
+
+ // Now let's create a server by using createServer method.
+ // createServer Method takes parameters either it a function or some contents.
+
+ var server = myHTTP.createServer((requestTo, ResponseTo)=>{
+    ResponseTo.write("Welcome to our server");
+    ResponseTo.end();
+ });
+
+ server.listen(5000);
