@@ -80,15 +80,11 @@
             </ol>     
         `)
     }
-    // else{
-    //     serverResponse.end(`
-    //         <h1> Oops!</h1>
-    //         <p> 404 page not found:( </p>
-    
-    //         <a href = 'http://localhost:5002/'> Back to Home </a>
-    //     `)
-    // }
-    
+    serverResponse.end(`
+        <h1> Oops!</h1>
+        <p> 404 page not found:( </p>
+        <a href = 'http://localhost:5002/'> Back to Home </a>
+        `);
  })
 
  server2.listen(5002);
