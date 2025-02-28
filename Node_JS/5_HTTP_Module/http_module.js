@@ -19,8 +19,25 @@
  // createServer Method takes parameters either it a function or some contents.
 
  var server = myHTTP.createServer((requestTo, ResponseTo)=>{
-    ResponseTo.write("Welcome to our server");
-    ResponseTo.end();
+    // console.log(requestTo);
+    // Request is a giat object which have so many other functions and data.
+    ResponseTo.write("Welcome to our server"); // in response it write contents as it given to client
+    ResponseTo.end(); // this will end the response.
  });
 
- server.listen(5000);
+ server.listen(5000); // http://localhost:5000/
+
+ // Now let's learn about the request giant object how it works:)
+
+ var server = myHTTP.createServer((requestTo, ResponseTo)=>{
+   if(requestTo.url == '/'){
+    ResponseTo.end('Welcome my PK home server page');
+   }
+
+    if(requestTo.url == '/about'){ // when user enter url as http://localhost:5001/about
+        // it will redirect to browser page where following contents displayed.
+     ResponseTo.end('Hi there, THis is Parkash Kumar full stack developer');
+    }
+ });
+
+ server.listen(5001); // I have create another server as http://localhost:5001/about
